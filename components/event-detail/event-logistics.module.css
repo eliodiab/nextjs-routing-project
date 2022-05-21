@@ -17,16 +17,17 @@
 .image {
   width: 10rem;
   height: 10rem;
+  position: relative;
   border-radius: 50%;
   overflow: hidden;
   border: 5px solid white;
 }
 
-.image img {
+/* .image img {
   width: 10rem;
-  height: 10rem;
-  object-fit: cover;
-}
+  height: 8rem;
+  position: relative;
+} */
 
 .list {
   flex: 3;

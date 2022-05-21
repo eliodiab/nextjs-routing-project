@@ -21,7 +21,17 @@ const EventItem = (props) => {
   return (
     <li className={styles.item}>
       {/* we can navigate in public folder as we are already in there bc of nextjs */}
-      <Image src={"/" + image} alt={title} width={500} height={500} />
+
+      <div>
+        <Image
+          src={`/${image}`}
+          alt={title}
+          placeholder="blur"
+          blurDataURL={`/${image}`}
+          layout="fill"
+          objectFit="cover"
+        />
+      </div>
       <div className={styles.contents}>
         <div className={styles.summary}>
           <h2>{title}</h2>

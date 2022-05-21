@@ -1,9 +1,14 @@
-import MainHeader from "./main-header";
+import { Suspense, lazy } from "react";
+// import MainHeader from "./main-header";
+
+const MainHeader = lazy(() => import("./main-header"));
 
 const Layout = (props) => {
   return (
     <>
-      <MainHeader />
+      <Suspense fallback={<div />}>
+        <MainHeader />
+      </Suspense>
       <main>{props.children}</main>
     </>
   );

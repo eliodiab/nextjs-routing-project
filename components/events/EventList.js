@@ -6,7 +6,6 @@ const EventList = (props) => {
   return (
     <ul className={styles.list}>
       {items.map((event) => {
-        console.log(event.id);
         return (
           <EventItem
             key={event.id}
